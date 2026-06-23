@@ -1,0 +1,63 @@
+.cards-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.support-btn {
+  background-color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.support-btn:hover {
+  background-color: #f8fafc;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: -60px auto 0 auto;
+  position: relative;
+  z-index: 20;
+}
+
+.card-wrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  display: inline-block;
+}
+
+.debit-card-img {
+  width: 400px;
+  border-radius: 1rem;
+  display: block;
+}
+
+.card-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  opacity: 0.3;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .debit-card-img {
+    width: 100%;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,169 @@
+/* Tabs */
+.finance-tabs-container {
+  max-width: 1200px;
+  margin: -60px auto 0 auto;
+  position: relative;
+  z-index: 20;
+}
+
+.finance-tabs {
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.tab-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  background: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-right: 1px solid var(--border-color);
+  border-radius: 0;
+}
+
+.tab-btn:last-child {
+  border-right: none;
+}
+
+.tab-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tab-btn.active .tab-icon {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: #f8fafc;
+}
+
+/* Content Area */
+.finance-content {
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.finance-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+}
+
+.print-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  background: transparent;
+}
+
+/* Loans List */
+.loans-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-item-header {
+  display: flex;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.loan-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.col-payee { flex: 2; display: flex; align-items: center; gap: 1rem; font-size: 1.1rem; }
+.col-standard { flex: 1; }
+.col-next { flex: 1.5; color: var(--text-dark); }
+.col-amount { flex: 1.5; display: flex; align-items: center; justify-content: space-between; }
+
+.payee-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ed8936;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amount-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.due-amount-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.btn-sm {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .finance-tabs {
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    flex: 1 1 33%;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .loan-item-header { display: none; }
+  .loan-item { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .col-payee, .col-standard, .col-next, .col-amount { flex: none; width: 100%; justify-content: flex-start; }
+}
