@@ -19,7 +19,7 @@
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
 }
 
 .dashboard-hero-content {
@@ -37,13 +37,13 @@
 .dashboard-title {
   color: white;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 400; /* Matching thinner font in screenshot */
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .icon-btn {
@@ -84,4 +84,17 @@
   margin-top: -30px; /* pull grid up into hero */
   position: relative;
   z-index: 20;
+}
+
+@media (max-width: 600px) {
+  .dashboard-hero {
+    height: 240px;
+  }
+  .dashboard-hero-content {
+    padding: 0 1.5rem 3rem 1.5rem; /* give space for overlapping cards */
+  }
+  .dashboard-main {
+    margin-top: -50px; /* Pull cards up more on mobile */
+    padding: 0 1rem;
+  }
 }

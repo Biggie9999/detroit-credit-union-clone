@@ -1,13 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MoreHorizontal, BarChart2 } from 'lucide-react';
 import './DashboardGrid.css';
 
 const DashboardGrid = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="dashboard-grid">
       {/* Column 1 */}
       <div className="grid-col">
-        <div className="card share-accounts-card shadow-sm">
+        <div className="card share-accounts-card shadow-sm clickable-card" onClick={() => navigate('/accounts/share-draft')}>
           <div className="card-header">
             <span className="badge">Share Accounts</span>
             <button className="icon-btn-small"><MoreHorizontal size={16} /></button>
@@ -44,7 +47,7 @@ const DashboardGrid = () => {
 
       {/* Column 2 */}
       <div className="grid-col">
-        <div className="card loan-accounts-card shadow-sm">
+        <div className="card loan-accounts-card shadow-sm clickable-card" onClick={() => navigate('/accounts/home-equity')}>
           <div className="card-header">
             <span className="badge">Loan Accounts</span>
             <button className="icon-btn-small"><MoreHorizontal size={16} /></button>

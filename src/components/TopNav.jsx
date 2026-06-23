@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, RefreshCw, PieChart, CreditCard, LayoutGrid, Plus, LogOut, User, Menu, X, Settings, Bell, ChevronRight, FileText, Lock, MapPin, Send, HelpCircle, FilePlus, ArrowRight } from 'lucide-react';
+import { LayoutDashboard, RefreshCw, PieChart, CreditCard, LayoutGrid, Plus, LogOut, User, Menu, X, Settings, Bell, ChevronRight, FileText, Lock, MapPin, Send, HelpCircle, FilePlus, ArrowRight, CircleDollarSign, BarChart2 } from 'lucide-react';
 import './TopNav.css';
 
 const TopNav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+  const [isQuickActionsOpen, setIsQuickActionsOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const toggleMoreMenu = () => setIsMoreMenuOpen(!isMoreMenuOpen);
+  const toggleQuickActions = () => setIsQuickActionsOpen(!isQuickActionsOpen);
 
   return (
     <>
@@ -82,7 +84,7 @@ const TopNav = () => {
 
           {/* Actions */}
           <div className="topnav-actions">
-            <button className="action-btn plus-btn">
+            <button className="action-btn plus-btn" onClick={toggleQuickActions}>
               <Plus size={20} />
             </button>
             <button className="action-btn logout-btn">
@@ -108,7 +110,7 @@ const TopNav = () => {
           <button className="close-btn" onClick={toggleMobileMenu}>
             <X size={32} color="var(--primary-color)" />
           </button>
-          <button className="action-btn plus-btn mobile-plus">
+          <button className="action-btn plus-btn mobile-plus" onClick={toggleQuickActions}>
             <Plus size={20} />
           </button>
         </div>
@@ -135,6 +137,32 @@ const TopNav = () => {
         </div>
       </div>
       {isMobileMenuOpen && <div className="mobile-overlay fade-in" onClick={toggleMobileMenu}></div>}
+
+      {/* Quick Actions Overlay Sidebar */}
+      <div className={`quick-actions-sidebar ${isQuickActionsOpen ? 'open' : ''}`}>
+        <button className="qa-close-btn" onClick={toggleQuickActions}>
+          <X size={24} color="var(--primary-color)" />
+        </button>
+        <div className="qa-items">
+          <div className="qa-item">
+            <div className="qa-icon alert"><Bell size={24} color="white" /></div>
+            <span>Add Alert</span>
+          </div>
+          <div className="qa-item">
+            <div className="qa-icon bill"><FileText size={24} color="white" /></div>
+            <span>Pay Bill</span>
+          </div>
+          <div className="qa-item">
+            <div className="qa-icon loan"><CircleDollarSign size={24} color="white" /></div>
+            <span>Apply for Loan</span>
+          </div>
+          <div className="qa-item">
+            <div className="qa-icon share"><BarChart2 size={24} color="white" /></div>
+            <span>Create Share</span>
+          </div>
+        </div>
+      </div>
+      {isQuickActionsOpen && <div className="qa-overlay fade-in" onClick={toggleQuickActions}></div>}
     </>
   );
 };
