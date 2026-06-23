@@ -17,11 +17,7 @@ const LoginModal = () => {
     <div className="login-modal shadow-lg">
       <div className="modal-header">
         <div className="logo-container">
-          <div className="logo-icon">1D</div>
-          <div className="logo-text">
-            <strong>ONE DETROIT</strong>
-            <span>CREDIT UNION</span>
-          </div>
+          <img src="/logo.svg" alt="One Detroit Credit Union" className="brand-logo" />
         </div>
         <h2>Sign In to Continue</h2>
       </div>
