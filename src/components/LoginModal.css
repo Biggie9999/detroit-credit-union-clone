@@ -63,15 +63,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-color);
+  color: #646182;
   font-weight: 500;
   cursor: pointer;
-}
-
-.remember-device input {
-  width: 1.25rem;
-  height: 1.25rem;
-  accent-color: var(--primary-color);
+  font-size: 0.85rem;
 }
 
 .help-link {
@@ -87,6 +82,7 @@
 .secondary-actions {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .modal-footer {
@@ -98,6 +94,68 @@
 
 .modal-footer strong {
   color: var(--primary-color);
+}
+
+.input-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #646182;
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #f8fafc;
+  outline: none;
+}
+
+.input-field:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+.btn-pill {
+  border-radius: 2rem;
+  background-color: #4b4668;
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden-checkbox:not(:checked) + .custom-checkbox {
+  background-color: transparent;
+  border: 1px solid #a0aec0;
+}
+
+.hidden-checkbox:not(:checked) + .custom-checkbox svg {
+  display: none;
+}
+
+.secondary-btn {
+  flex: 1;
+  background-color: #f8fafc;
+  color: #4b4668;
+  border: none;
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.secondary-btn:hover {
+  background-color: #e2e8f0;
 }
 
 @media (max-width: 900px) {

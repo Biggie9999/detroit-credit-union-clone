@@ -48,20 +48,22 @@ const LoginModal = () => {
 
         <div className="form-actions">
           <label className="remember-device">
-            <input type="checkbox" />
-            <span className="checkmark"></span>
-            Remember Device
+            <input type="checkbox" className="hidden-checkbox" defaultChecked />
+            <div className="custom-checkbox">
+              <svg viewBox="0 0 24 24" width="12" height="12" stroke="white" strokeWidth="3" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <span>Remember Device</span>
           </label>
           <a href="#help" className="help-link">Need Login Help?</a>
         </div>
 
-        <button type="submit" className="btn btn-primary w-full mt-4 btn-large">
+        <button type="submit" className="btn btn-primary w-full mt-4 btn-large btn-pill">
           Continue
         </button>
 
-        <div className="secondary-actions mt-4">
-          <button type="button" className="btn btn-outline w-full">Enroll</button>
-          <button type="button" className="btn btn-outline w-full">Join</button>
+        <div className="secondary-actions">
+          <button type="button" className="btn secondary-btn">Enroll</button>
+          <button type="button" className="btn secondary-btn">Join</button>
         </div>
       </form>
 

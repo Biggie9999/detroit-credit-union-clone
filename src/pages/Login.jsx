@@ -42,14 +42,12 @@ const Login = () => {
           
           <div className="login-modal-section">
             <LoginModal />
+            <div className="login-footer hidden-mobile">
+              <a href="#locations">CU Locations</a>
+              <a href="#contact">Contact Us</a>
+            </div>
           </div>
         </div>
-      </div>
-      
-      {/* Footer Links */}
-      <div className="login-footer hidden-mobile">
-        <a href="#locations">CU Locations</a>
-        <a href="#contact">Contact Us</a>
       </div>
     </div>
   );
