@@ -123,3 +123,33 @@
 .modal-footer strong {
   color: var(--primary-color);
 }
+
+@media (max-width: 900px) {
+  .login-modal {
+    border-radius: 2rem 2rem 0 0;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .modal-header h2 {
+    text-align: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .secondary-actions {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .btn-outline {
+    background-color: white;
+  }
+}
