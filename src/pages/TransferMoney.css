@@ -5,13 +5,14 @@
 }
 
 .page-hero {
-  height: 160px;
+  height: 280px;
   background-image: url('/dashboard_skyline.png');
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-top: 80px;
 }
 
 .page-hero::before {

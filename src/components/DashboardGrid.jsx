@@ -36,10 +36,12 @@ const DashboardGrid = () => {
             <div className="new-share-text">
               <h3>New Share</h3>
               <p>Add custom savings & checking accounts, share certificates, money market accounts and more</p>
+              <button className="btn btn-primary mt-4" style={{backgroundColor: '#4b4668', border: 'none'}}>Create Share</button>
             </div>
-            <div className="new-share-action">
-              <div className="chart-icon"><BarChart2 size={32} color="#4a446c" /></div>
-              <button className="btn btn-primary">Create Share</button>
+            <div className="new-share-icon" style={{alignSelf: 'flex-start', marginLeft: '1rem'}}>
+              <div style={{background: '#f8fafc', padding: '0.75rem', borderRadius: '0.5rem', boxShadow: '0 2px 4px rgba(0,0,0,0.05)'}}>
+                 <BarChart2 size={32} color="#4a446c" />
+              </div>
             </div>
           </div>
         </div>
@@ -71,9 +73,9 @@ const DashboardGrid = () => {
 
       {/* Column 3 */}
       <div className="grid-col">
-        <div className="card bnpl-card shadow-sm center-content">
+        <div className="card bnpl-card shadow-sm center-content" style={{display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center'}}>
           <h3>Buy Now, Pay Later</h3>
-          <button className="btn btn-primary mt-4">View My Offers</button>
+          <button className="btn btn-primary mt-4" style={{backgroundColor: '#4b4668', border: 'none'}}>View My Offers</button>
         </div>
       </div>
 

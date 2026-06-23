@@ -21,6 +21,9 @@ const Dashboard = () => {
       
       <div className="dashboard-main">
         <DashboardGrid />
+        <div className="dashboard-footer-logo" style={{padding: '0 0 2rem 0'}}>
+           <img src="/logo.svg" alt="One Detroit Credit Union" style={{height: '40px'}} />
+        </div>
       </div>
     </div>
   );
